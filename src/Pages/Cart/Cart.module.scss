@@ -1,0 +1,25 @@
+.cartWrapper{
+    max-width: 900px;
+    width: 100%;
+    margin: 32px auto;    
+    .title{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+    .total{
+        font-weight: 700;
+        font-size: 20px;
+        margin-top: 24px;
+    }
+    .goCheckout{
+            background-color: #ff4729;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 14px;
+            border: none;
+            display: inline-block;
+            margin: 32px auto;
+        
+    }
+}

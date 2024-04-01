@@ -1,0 +1,19 @@
+.category_page{
+    max-width: 1130px;
+    width: 100%;
+    margin: 24px auto;
+    .category_page_products{
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+@media(max-width: 992px){
+    .category_page{
+        .category_page_products{
+            justify-content: center;
+           
+        }
+    }
+}

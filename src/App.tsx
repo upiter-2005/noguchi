@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {lazy} from 'react';
+import './App.scss';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
+import {Routes, Route} from 'react-router-dom';
+import Layout from "./Components/Layout";
+import Home from "./Pages/Home";
+import Cart from "./Pages/Cart";
+import Category from "./Pages/Category";
+import Checkout from "./Pages/Checkout";
+
+//const Cart = lazy(()=>import(/*webpackChunkName: "Cart" */'./Pages/Cart'));
+
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<Home/>} />
+          <Route path='cart' element={<Cart/>} />
+          <Route path='checkout' element={<Checkout/>} />
+          <Route path='category/:id' element={<Category/>} />
+        </Route>
+      </Routes>
+      <ToastContainer />
+   </>
   );
 }
 

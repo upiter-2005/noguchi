@@ -1,0 +1,18 @@
+.search{
+    input{
+        width: 240px;
+        border-radius: 16px;
+        border: 1px solid #d3d3d3; 
+        padding: 12px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+        &::placeholder{
+            font-weight: 700;
+            color: #ff8710;
+        }
+    }
+}
+.search{
+    input{
+        padding: 8px;
+    }
+}
