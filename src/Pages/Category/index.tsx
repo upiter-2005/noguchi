@@ -7,7 +7,6 @@ import { selectProducts, fetchProducts, fetchProductsImages } from "../../redux/
 import { CategoriesButtons, Product, Skeleton } from '../../Components'
 
 
-
 const Category: React.FC = () => {
   const [products, setProducts] = useState([])
   const [activeCat, setActiveCat] = useState<string>('')
@@ -18,30 +17,28 @@ const Category: React.FC = () => {
 
   useEffect(() => {
     if (items.length < 1) {
-      dispatch(fetchProducts());
-      dispatch(fetchProductsImages());
+      dispatch(fetchProducts())
+      dispatch(fetchProductsImages())
     } else {
       const filterResult = items.filter((obj: any) => obj.acf.category[0] === id)
       setProducts(filterResult);
 
-      console.log(items);
     }
 
   }, [items, dispatch]);
 
   useEffect(() => {
-
-    setActiveCat(id);
-  }, [id])
+    setActiveCat(id)
+  }, [])
 
 
   const onClickCategory = (cat: string) => {
     setActiveCat(cat)
     const filterResult = items.filter((obj: any) => obj.acf.category[0] === cat)
-    setProducts(filterResult);
-    console.log(filterResult);
+    setProducts(filterResult)
+    console.log(filterResult)
   }
-  const skeleton = [...new Array(6)].map((item, i) => <Skeleton key={i} />);
+  const skeleton = [...new Array(6)].map((item, i) => <Skeleton key={i} />)
 
   const list = products?.map((obj: any) => <Product
     key={obj.id}

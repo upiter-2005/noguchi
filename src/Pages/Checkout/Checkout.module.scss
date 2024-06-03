@@ -37,3 +37,17 @@
         }
     }
 }
+@media(max-width:992px){
+    .checkoutWrapper{
+        flex-wrap: wrap;
+        &_row{
+            flex-wrap: wrap;
+            .checkout_form{
+                width: 100%;
+            }
+            .checkout_basket{
+                width: 100%;
+            }
+        }
+    }
+}

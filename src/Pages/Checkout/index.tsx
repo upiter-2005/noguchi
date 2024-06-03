@@ -28,7 +28,7 @@ import { selectCart } from "../../redux/slices/cartSlice"
             <input type="text" placeholder="Ваш телефон" />
             <input type="text" placeholder="Ваша адреса" />
             <textarea name="" placeholder='Ваш коментар до замовлення'></textarea>
-            <button type='submit'>Выдправити</button>
+            <button type='submit'>Відправити</button>
           </form>
         </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { toast } from 'react-toastify';
 import classes from './Popup.module.scss'
 import { addToCard, minusItem, selectCartItemById } from '../../redux/slices/cartSlice'
@@ -29,6 +29,11 @@ const Popup: React.FC<PopupProps> = ({ id, img, title, description, price, close
         }))
         toast("Товар доданий у кошик!");
     }
+
+    useEffect(()=>{
+        document.body.style.overflowY = "hidden";
+        return () => {document.body.style.overflow = "auto"}
+    })
 
     return (
         <div className={classes.popup} onClick={() => closePopup(false)}>

@@ -19,7 +19,7 @@ import { useAppDispatch } from '../../redux/store'
  
       <div className={classes.qty}>
         Кіл-сть: {count}
-        <div>({count * price} грн)</div>
+        <div className={classes.dataCatrItem}>({count * price} грн)</div>
       </div>
       <button><img src="img/remove.png" alt="" onClick={()=>dispatch(removeItem(id))} /></button>
     </div>
